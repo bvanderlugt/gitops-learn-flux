@@ -1,9 +1,5 @@
 name: e2e
 
-
-permissions:
-  contents: read # note this is for access to private repo, not needed in public repos
-
 on:
   workflow_dispatch:
   push:
