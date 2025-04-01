@@ -24,6 +24,8 @@ jobs:
           flux create source git flux-system \
           --interval=15m \
           --url=${{ github.event.repository.html_url }} \
+          --username=${GITHUB_ACTOR} \
+          --password=${{ secrets.GITHUB_TOKEN }} \
           --branch=${GITHUB_REF#refs/heads/} \
           --ignore-paths="clusters/**/flux-system/"
 
